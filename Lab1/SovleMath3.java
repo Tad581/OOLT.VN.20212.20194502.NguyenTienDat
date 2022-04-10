@@ -1,3 +1,4 @@
+package Baitap.Lab1;
 import javax.swing.JOptionPane;
 import java.lang.Math;
 
