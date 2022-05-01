@@ -1,3 +1,10 @@
+package order;
+
+import java.lang.Math;
+import disc.DigitalVideoDisc;
+import disc.CompactDisc;
+import utils.MyDate;
+
 public class Orders {
 
 	public static final int MAXIMUM_ORDERED_ITEMS = 10;
@@ -142,7 +149,7 @@ public class Orders {
 		date = d;
 	}
 
-	public void printOrders(Orders o) {
+	public void printOrders() {
 		System.out.println("**************************Order**************************");
 		System.out.println("Order " + nbOrders);
 		System.out.print("Date: ");
@@ -150,12 +157,23 @@ public class Orders {
 		System.out.println("Ordered items: ");
 		int i;
 		for (i = 0; i < qtyDVD; i++) {
-			System.out.println("DVD - " + itemDigitalVideoDiscs[i].getTitle() + " - " + itemDigitalVideoDiscs[i].getCategory() + " - " + itemDigitalVideoDiscs[i].getDirector() + " - " + itemDigitalVideoDiscs[i].getLength() + ": " + itemDigitalVideoDiscs[i].getCost() + "$");
+			System.out.println("DVD - " + itemDigitalVideoDiscs[i].getTitle() + " - "
+					+ itemDigitalVideoDiscs[i].getCategory() + " - " + itemDigitalVideoDiscs[i].getDirector() + " - "
+					+ itemDigitalVideoDiscs[i].getLength() + ": " + itemDigitalVideoDiscs[i].getCost() + "$");
 		}
 		for (i = 0; i < qtyCD; i++) {
-			System.out.println("CD - " + itemCompactDisc[i].getTitle() + " - " + itemCompactDisc[i].getCategory() + " - " + itemCompactDisc[i].getDirector() + " - " + itemCompactDisc[i].getLength() + ": " + itemCompactDisc[i].getCost() + "$");
+			System.out.println("CD - " + itemCompactDisc[i].getTitle() + " - " + itemCompactDisc[i].getCategory()
+					+ " - " + itemCompactDisc[i].getDirector() + " - " + itemCompactDisc[i].getLength() + ": "
+					+ itemCompactDisc[i].getCost() + "$");
 		}
 		System.out.println("*********************************************************");
+	}
+
+	public DigitalVideoDisc getALuckyItem() {
+		int rand = 0; 
+		rand = (int) (Math.random() * qtyDVD) + 0;
+
+		return itemDigitalVideoDiscs[rand];
 	}
 
 }

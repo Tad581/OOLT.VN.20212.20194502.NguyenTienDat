@@ -1,3 +1,5 @@
+package utils;
+
 import java.util.Calendar;
 import java.util.Scanner;
 
@@ -107,7 +109,7 @@ public class MyDate {
 			case "12":
 				date.setMonth("December");
 				break;
-			default: 
+			default:
 				break;
 		}
 
