@@ -9,7 +9,6 @@ public class ConcatenationInLoops {
             s += r.nextInt(2);;
         }
         System.out.println(System.currentTimeMillis() - start);
-
         r = new Random(123);
         start = System.currentTimeMillis();
         StringBuilder sb = new StringBuilder();
