@@ -1,19 +1,20 @@
-package disc;
+package media;
 
-public class CompactDisc {
+import java.util.ArrayList;
+
+public class Media {
     private String title;
     private String category;
-    private String director;
-    private int length;
     private float cost;
 
-    public CompactDisc(String title, String category, String director, int length, float cost) {
-        super();
+    public Media(String title, String category, float cost) {
         this.title = title;
         this.category = category;
-        this.director = director;
-        this.length = length;
         this.cost = cost;
+    }
+
+    public Media(String title) {
+        this.title = title;
     }
 
     public String getTitle() {
@@ -32,22 +33,6 @@ public class CompactDisc {
         this.category = category;
     }
 
-    public String getDirector() {
-        return director;
-    }
-
-    public void setDirector(String director) {
-        this.director = director;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
-    }
-
     public float getCost() {
         return cost;
     }
@@ -55,4 +40,6 @@ public class CompactDisc {
     public void setCost(float cost) {
         this.cost = cost;
     }
+
+    
 }

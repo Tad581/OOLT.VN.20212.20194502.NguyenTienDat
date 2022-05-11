@@ -1,8 +1,8 @@
 package order;
 
 import java.lang.Math;
-import disc.DigitalVideoDisc;
-import disc.CompactDisc;
+import media.DigitalVideoDisc;
+import media.CompactDisc;
 import utils.MyDate;
 
 public class Orders {

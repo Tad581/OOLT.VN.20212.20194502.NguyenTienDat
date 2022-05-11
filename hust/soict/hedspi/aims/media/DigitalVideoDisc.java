@@ -1,40 +1,19 @@
-package disc;
+package media;
 
-public class DigitalVideoDisc {
-	private String title;
-	private String category;
+import javax.print.attribute.standard.Media;
+
+public class DigitalVideoDisc extends Media {
 	private String director;
 	private int length;
-	private float cost;
 
 	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
-		super();
-		this.title = title;
-		this.category = category;
+		super(title, category, cost);
 		this.director = director;
 		this.length = length;
-		this.cost = cost;
 	}
 
 	public DigitalVideoDisc(String title) {
-		super();
-		this.title = title;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getCategory() {
-		return category;
-	}
-
-	public void setCategory(String category) {
-		this.category = category;
+		super(title);
 	}
 
 	public String getDirector() {
@@ -53,14 +32,6 @@ public class DigitalVideoDisc {
 		this.length = length;
 	}
 
-	public float getCost() {
-		return cost;
-	}
-
-	public void setCost(float cost) {
-		this.cost = cost;
-	}
-
 	public boolean search(String title) {
 		String[] word = title.split("\\s");
 		int i;
@@ -69,6 +40,6 @@ public class DigitalVideoDisc {
 				return false;
 			}
 		}
- 		return true;
+		return true;
 	}
 }
