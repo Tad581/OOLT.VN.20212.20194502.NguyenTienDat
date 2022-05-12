@@ -1,7 +1,5 @@
 package media;
 
-import javax.print.attribute.standard.Media;
-
 public class DigitalVideoDisc extends Media {
 	private String director;
 	private int length;
@@ -30,16 +28,5 @@ public class DigitalVideoDisc extends Media {
 
 	public void setLength(int length) {
 		this.length = length;
-	}
-
-	public boolean search(String title) {
-		String[] word = title.split("\\s");
-		int i;
-		for (i = 0; i < word.length; i++) {
-			if (!this.title.contains((word[i]))) {
-				return false;
-			}
-		}
-		return true;
 	}
 }

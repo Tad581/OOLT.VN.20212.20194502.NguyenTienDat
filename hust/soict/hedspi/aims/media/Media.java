@@ -1,20 +1,32 @@
 package media;
 
-import java.util.ArrayList;
 
 public class Media {
     private String title;
     private String category;
     private float cost;
+    private int id;
 
-    public Media(String title, String category, float cost) {
-        this.title = title;
-        this.category = category;
-        this.cost = cost;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Media(String title) {
         this.title = title;
+    }
+
+    public Media(String title, String category) {
+        this(title);
+        this.category = category;
+    }
+
+    public Media(String title, String category, float cost) {
+        this(title, category);
+        this.cost = cost;
     }
 
     public String getTitle() {
@@ -41,5 +53,4 @@ public class Media {
         this.cost = cost;
     }
 
-    
 }
