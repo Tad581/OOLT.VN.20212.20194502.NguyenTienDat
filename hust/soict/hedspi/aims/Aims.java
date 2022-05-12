@@ -22,6 +22,8 @@ public class Aims {
 	public static void main(String[] args) {
 
 		Scanner input = new Scanner(System.in);
+		Scanner inputTitle = new Scanner(System.in);
+		Scanner inputCategory = new Scanner(System.in);
 		int choice, isOrderCreated = 0;
 		Orders order = new Orders();
 		// DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King Queen",
@@ -51,9 +53,9 @@ public class Aims {
 						break;
 					}
 					System.out.println("Enter the title:");
-					String title = input.nextLine();
+					String title = inputTitle.nextLine();
 					System.out.println("Enter the  category you want to add to order");
-					String category = input.nextLine();
+					String category = inputCategory.nextLine();
 					Media item;
 					if (category.equals("")) {
 						item = new Media(title);
