@@ -1,18 +1,31 @@
-package disc;
+package media;
 
-public class CompactDisc {
+
+public class Media {
     private String title;
     private String category;
-    private String director;
-    private int length;
     private float cost;
+    private int id;
 
-    public CompactDisc(String title, String category, String director, int length, float cost) {
-        super();
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Media(String title) {
         this.title = title;
+    }
+
+    public Media(String title, String category) {
+        this(title);
         this.category = category;
-        this.director = director;
-        this.length = length;
+    }
+
+    public Media(String title, String category, float cost) {
+        this(title, category);
         this.cost = cost;
     }
 
@@ -32,22 +45,6 @@ public class CompactDisc {
         this.category = category;
     }
 
-    public String getDirector() {
-        return director;
-    }
-
-    public void setDirector(String director) {
-        this.director = director;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
-    }
-
     public float getCost() {
         return cost;
     }
@@ -55,4 +52,5 @@ public class CompactDisc {
     public void setCost(float cost) {
         this.cost = cost;
     }
+
 }
