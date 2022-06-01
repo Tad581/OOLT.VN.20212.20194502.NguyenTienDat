@@ -1,7 +1,9 @@
-package media;
+package disc;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import media.Media;
 
 public class Book extends Media {
     private List<String> authors = new ArrayList<String>();
@@ -59,8 +61,5 @@ public class Book extends Media {
                 System.out.print(".\n");
             }
         }
-    }
-
-    public static void main(String[] args) {
     }
 }
