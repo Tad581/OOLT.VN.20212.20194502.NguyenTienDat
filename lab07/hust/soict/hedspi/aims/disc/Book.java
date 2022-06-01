@@ -1,7 +1,9 @@
-package media;
+package disc;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import media.Media;
 
 public class Book extends Media {
     private List<String> authors = new ArrayList<String>();
@@ -47,4 +49,17 @@ public class Book extends Media {
         }
     }
 
+    public void showDetailBook() {
+        System.out.printf("This book have title is: %s.\n", this.getTitle());
+        System.out.printf("List author of %s book are:", this.getTitle());
+        for (int i = 0; i < authors.size(); i++) {
+            String nameOfAuthors = authors.get(i);
+            System.out.printf(" %s", nameOfAuthors);
+            if (i != authors.size() - 1) {
+                System.out.print(", ");
+            } else {
+                System.out.print(".\n");
+            }
+        }
+    }
 }
