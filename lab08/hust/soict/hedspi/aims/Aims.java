@@ -4,6 +4,7 @@ import media.factory.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class Aims {
 	public static void showAdminMenu() {
@@ -12,6 +13,7 @@ public class Aims {
 		System.out.println("1. Create new item");
 		System.out.println("2. Delete item by id");
 		System.out.println("3. Display the items list");
+		System.out.println("4. Sort the items list");
 		System.out.println("0. Exit");
 		System.out.println("-------------------------");
 		System.out.println("Please choose a number: 0-1-2-3");
@@ -102,6 +104,9 @@ public class Aims {
 								for (int i = 0; i < size; i++) {
 									System.out.println("ID: " + i + " Title: " + media.get(i).getTitle());
 								}
+								break;
+							case 4:
+								Collections.sort(media);
 								break;
 							default:
 								System.out.println("Invalid choice");

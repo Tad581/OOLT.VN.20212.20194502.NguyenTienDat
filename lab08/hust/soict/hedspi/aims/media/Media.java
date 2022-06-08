@@ -1,12 +1,21 @@
 package media;
 
-public abstract class Media {
+public abstract class Media implements Comparable<Media> {
     private String title;
     private String category;
     private float cost;
+    private int id;
 
     public Media(String title) {
         this.title = title;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Media(String title, String category) {
@@ -42,6 +51,23 @@ public abstract class Media {
                 return false;
         }
         return true;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this.getId() == ((Media) o).getId()) {
+            return true;
+        } else
+            return false;
+    }
+
+    @Override
+    public int compareTo(Media o) {
+        // TODO Auto-generated method stub
+        if (this.getId() == o.getId()) {
+            return 1;
+        }
+        return 0;
     }
 
 }

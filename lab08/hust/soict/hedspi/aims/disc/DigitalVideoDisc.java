@@ -1,6 +1,5 @@
 package disc;
 
-
 public class DigitalVideoDisc extends Disc implements Playable {
 
     public DigitalVideoDisc(String title, String category, float cost, int length, String director) {
@@ -22,7 +21,4 @@ public class DigitalVideoDisc extends Disc implements Playable {
         System.out.println("DVD length: " + this.getLength());
     }
 
-    public static void main(String[] args) {
-
-    }
 }
