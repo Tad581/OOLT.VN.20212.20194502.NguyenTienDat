@@ -4,7 +4,6 @@ public abstract class Media {
     private String title;
     private String category;
     private float cost;
-    private int id;
 
     public Media(String title) {
         this.title = title;
