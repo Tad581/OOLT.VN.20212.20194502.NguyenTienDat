@@ -18,15 +18,6 @@ public class CompactDisc extends Disc implements Playable {
         return this.artist;
     }
 
-    // public boolean checkTrackExist(Track track) {
-    // for(int i = 0; i < tracks.size(); i++) {
-    // if(tracks.get(i).getTitle().equals(track.getTitle())) {
-    // return true;
-    // }
-    // }
-    // return false;
-    // }
-
     public void addTrack(Track track) {
         if (this.tracks.contains(track)) {
             System.out.println(track.getTitle() + "is already exist");
